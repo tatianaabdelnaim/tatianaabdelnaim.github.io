@@ -1,0 +1,11 @@
+show_talks=false
+
+[talk]
+title=Title 1
+date=Date 1
+university=University 1
+
+[talk]
+title=Title 2
+date=Date 2
+university=University 2
