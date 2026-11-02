@@ -6,7 +6,7 @@ function getKeyValue(line){
     }
 
     const key = line.slice(0, separator).trim().toLowerCase();
-    const value = line.slice(separator + 1).trim().toLowerCase();
+    const value = line.slice(separator + 1).trim();
 
     return {key, value};
 }
@@ -35,7 +35,7 @@ $(document).ready(function(){
                 return;
             }
 
-            showTalks = ["true", "yes", "1"].includes(line1["value"]);
+            showTalks = ["true", "yes", "1"].includes(line1["value"].toLowerCase());
 
             if(showTalks){
                 headerImage.hidden = true;
