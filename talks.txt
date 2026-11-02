@@ -1,4 +1,4 @@
-show_talks=false
+show_talks=true
 
 [talk]
 title=Title 1
