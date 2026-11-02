@@ -203,44 +203,6 @@ body {
     margin-top: 1rem;
 }
 
-.talks__image {
-    width: 100%;
-    border-radius: 0.5rem;
-    box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.3);
-}
-
-.talks__wrapper {
-    padding-left: 2rem;
-}
-
-.talk {
-    position: relative;
-    padding: 0.75rem 0;
-}
-
-.talk:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--gray);
-}
-
-.talk__date {
-    color: var(--red);
-    font-size: 1.125rem;
-}
-
-.talk__title {
-    color: var(--blue);
-}
-
-.talk__university {
-    color: var(--gray-dark);
-}
-
 main {
     padding: 2rem 0;
     /* margin-top: 1.5rem; */
@@ -349,10 +311,48 @@ main {
     margin-bottom: 1rem;
 }
 
+.no-talks {
+    color: var(--red) !important;
+}
+
+.upcoming-talks__list {
+    list-style-type: none;
+    padding-left: 0;
+    padding-left: 1rem;
+}
+
+.talk {
+    position: relative;
+    padding: 1.25rem 0;
+}
+
+.talk:first-child {
+    padding: 0 0 1.25rem;
+}
+
+.talk:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--blue-light);
+    opacity: 0.5;
+}
+
+.talk__date {
+    color: var(--red);
+    font-size: 1.125rem;
+}
+
+.talk__university {
+    color: var(--blue);
+    font-size: 1rem;
+}
+
 @media screen and (max-width: 991px){
-    .talks__wrapper {
-        padding-left: 1rem;
-    }
+
 }
 
 @media screen and (max-width: 767px){
@@ -363,16 +363,6 @@ main {
 
     .header__subtitle {
         font-size: 1rem;
-    }
-
-    .talks__wrapper {
-        padding: 0 2rem;
-    }
-
-    .talks__image {
-        display: block;
-        width: 220px;
-        margin: 0 auto;
     }
 
     .outreach__list {
@@ -423,4 +413,3 @@ main {
     }
 
 }
-

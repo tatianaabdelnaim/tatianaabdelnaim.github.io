@@ -12,9 +12,8 @@ function getKeyValue(line){
 }
 
 $(document).ready(function(){
-    const headerImage = document.getElementById("header-image");
-    const talksContainer = document.getElementById("talks");
-    const talksList = document.getElementById("talks-list");
+    const noTalksMessage = document.getElementById("no-talks");
+    const talksList = document.getElementById("upcoming-talks-list");
     const template = document.getElementById("talk-template");
 
     let talks = [];
@@ -38,8 +37,7 @@ $(document).ready(function(){
             showTalks = ["true", "yes", "1"].includes(line1["value"].toLowerCase());
 
             if(showTalks){
-                headerImage.hidden = true;
-                talksContainer.hidden = false;
+                noTalksMessage.hidden = true;
         
                 for (const line of lines.slice(1)) {
                     const trimmedLine = line.trim();
@@ -76,17 +74,12 @@ $(document).ready(function(){
                     const clone = template.content.cloneNode(true);
         
                     clone.querySelector(".talk__date").textContent = talk.date || "";
-                    clone.querySelector(".talk__title").textContent = talk.title || "";
                     clone.querySelector(".talk__university").textContent = talk.university || "";
         
                     fragment.appendChild(clone);
                 }
         
                 talksList.replaceChildren(fragment);
-            }
-            else {
-                talksList.replaceChildren();
-                talksContainer.hidden = true;
             }
         },
         complete: function() {
