@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/c5c180f8df.js" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
 
     <!-- Main JS -->
-    <script src="script.js?v=16" defer></script>
+    <script src="script.js?v=17" defer></script>
 
 </head>
 <body>
@@ -94,7 +94,7 @@
             </ul>
 
             <div class="tab-content">
-                <div class="tab-pane container active" id="about-me-tab">
+                <div class="tab-pane container fade" id="about-me-tab">
 
                     <div class="about">
                         <h3 class="about__title">
@@ -164,19 +164,60 @@
                     </div>
                 </div>
 
-                <div class="tab-pane container fade" id="talks-tab">
-                    <template id="talk-template">
+                <div class="tab-pane container active" id="talks-tab">
+                    <!-- <template id="talk-template">
                         <li class="talk">
                             <span class="talk__date">Date</span>
+                            <h3 class="talk__title mt-1 mb-0">Talk Title</h3>
                             <p class="talk__university mb-0">University / Conference</p>
                         </li>
-                    </template>
+                    </template> -->
 
                     <div class="upcoming-talks">
                         <h4 class="section-title upcoming-talks__title">Upcoming Talks</h4>
 
+                        <!-- <li id="no-talks" class="no-talks">Stay tuned for announcements about upcoming talks and academic presentations.</li> -->
+
                         <ul class="section-list upcoming-talks__list" id="upcoming-talks-list">
-                            <li id="no-talks" class="no-talks">Stay tuned for announcements about upcoming talks and academic presentations.</li>
+                            <li class="talk">
+                                <span class="talk__date">Date</span>
+                                <p class="talk__university mb-0">University / Conference</p>
+                            </li>
+
+                            <li class="talk">
+                                <span class="talk__date">Date</span>
+                                <p class="talk__university mb-0">University / Conference</p>
+                            </li>
+
+                            <li class="talk">
+                                <span class="talk__date">Date</span>
+                                <p class="talk__university mb-0">University / Conference</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="previous-talks">
+                        <h4 class="section-title previous-talks__title">Previous Talks</h4>
+
+                        <ul class="section-list previous-talks__list" id="previous-talks-list">
+                            <li class="talk">
+                                <span class="talk__date">Date</span>
+                                <h3 class="talk__title my-1">Talk Title</h3>
+                                <p class="talk__university mb-0">University / Conference</p>
+                            </li>
+
+                            <li class="talk">
+                                <span class="talk__date">Date</span>
+                                <h3 class="talk__title my-1">Talk Title</h3>
+                                <p class="talk__university mb-0">University / Conference</p>
+                            </li>
+
+                            <li class="talk">
+                                <span class="talk__date">Date</span>
+                                <h3 class="talk__title my-1">Talk Title</h3>
+                                <p class="talk__university mb-0">University / Conference</p>
+                            </li>
+
                         </ul>
                     </div>
                 </div>

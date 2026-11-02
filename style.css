@@ -315,7 +315,8 @@ main {
     color: var(--red) !important;
 }
 
-.upcoming-talks__list {
+.upcoming-talks__list,
+.previous-talks__list {
     list-style-type: none;
     padding-left: 0;
     padding-left: 1rem;
@@ -323,11 +324,11 @@ main {
 
 .talk {
     position: relative;
-    padding: 1.25rem 0;
+    padding: 1rem 0;
 }
 
 .talk:first-child {
-    padding: 0 0 1.25rem;
+    padding: 0 0 1rem;
 }
 
 .talk:not(:last-child)::after {
@@ -344,6 +345,11 @@ main {
 .talk__date {
     color: var(--red);
     font-size: 1.125rem;
+}
+
+.talk__title {
+    color: var(--blue);
+    font-size: 1.375rem;
 }
 
 .talk__university {
